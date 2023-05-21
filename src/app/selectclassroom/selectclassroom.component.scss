@@ -1,0 +1,62 @@
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 50%;
+}
+
+.green-tick:before {
+    content: '\2713';
+    color: green;
+}
+
+.red-cross:before {
+    content: '\2717';
+    color: red;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+td.mat-cell,
+th.mat-header-cell {
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* Add spacing between columns */
+
+td.mat-cell:first-child,
+th.mat-header-cell:first-child {
+    padding-right: 800px;
+}
+
+td.mat-cell:last-child,
+th.mat-header-cell:last-child {
+    padding-left: 109px;
+}

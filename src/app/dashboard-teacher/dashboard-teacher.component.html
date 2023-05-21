@@ -1,0 +1,42 @@
+<body>
+    <br><br><br>
+    <div class="button-container">
+        <button mat-button color="primary" (click)="logout()" style="color: rgb(240, 240, 240); background-color: #272150;">Logout</button>
+    </div>
+    <div class="form-container">
+
+        <h2> </h2>
+        <div class="example-container">
+            Enter the level
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="Level" [(ngModel)]="level">
+                    <mat-option value=""></mat-option>
+                    <mat-option value="IoT 3A">IoT 3A</mat-option>
+                    <mat-option value="IoT 3B">IoT 3B </mat-option>
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field> <br><br><br> Enter the subject
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="Subject" [(ngModel)]="subject">
+                    <mat-option value=""></mat-option>
+                    <mat-option value="VHDL">VHDL</mat-option>
+                    <!-- <mat-option value="Algebra ">Algebra</mat-option> -->
+                    <mat-option value=" Analysis"> Analysis </mat-option>
+                    <mat-option value="English">English </mat-option>
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field> <br><br><br> Enter the classroom
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="">
+
+                    <mat-option value="option">D013</mat-option>
+                    <mat-option value="option">D0114</mat-option>
+                    <mat-option value="option">D015</mat-option>
+                    <!-- <mat-option value="option">C 004</mat-option> -->
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field>
+            <button mat-button color="primary" (click)="login()" style="color: rgb(240, 240, 240); background-color: #2d265e;">Submit</button>
+        </div>
+    </div>
+</body>
