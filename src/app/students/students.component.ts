@@ -11,7 +11,7 @@ import { TeachersService } from '../teachers.service';
 })
 export class StudentsComponent {
 
-  displayedColumns: string[] = ['Name', 'level'];
+  displayedColumns: string[] = ['cin','Name','last', 'level'];
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!:MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;
@@ -22,7 +22,7 @@ this.getDataFromAPI();
 }
 
 getDataFromAPI(){
-  this.service. getstudents()
+  this.service. getAPIData()
   .subscribe((res)=>{
 //     next:(res)=>{
 
@@ -103,5 +103,4 @@ applyFilter(event: Event) {
    this.dataSource.filter = filterValue.trim().toLowerCase();
  }
 }
-
 

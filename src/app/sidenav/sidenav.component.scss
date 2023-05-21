@@ -9,64 +9,62 @@
     text-align: center;
     padding: 2.6rem 1rem;
     img {
-        width: 200px;
-        height: 130px;
+        width: 230px;
+        height: 40px;
     }
 }
 
 .mat-divider {
     border-top-width: 2px;
-    border-color: #4361ee;
-    ;
+    border-color: #8093f1;
 }
 
-.logo {
-    text-align: center;
-    padding: 0rem 0rem;
-    img {
-        width: 200px;
-        height: 70px;
-    }
-}
-
+// .logo {
+//     text-align: center;
+//     padding: 0rem 0rem;
+//     img {
+//         width: 200px;
+//         height: 70px;
+//     }
+// }
 .mat-list-item {
-    color: #030303 !important;
+    color: white !important;
     font-size: 0.8rem;
     height: 44px !important;
     margin-bottom: 4px;
     &:hover {
-        color: #484848 !important;
+        color: white !important;
     }
      ::ng-deep {
         .mat-list-item-content {
             border-radius: 5px;
             margin: 0 8px;
             &:hover {
-                background: #cae9ff !important;
+                background: white!important;
             }
         }
     }
 }
 
 .list-item-active {
-    // background: blue !important;
-    // border-radius: 0 2rem 2rem 0;
-    // &:hover {
-    //   background: blue;
-    // }
-    color: #434242 !important;
+    background: white!important;
+    border-radius: 0 2rem 2rem 0;
+    &:hover {
+        background: white;
+    }
+    color:white !important;
      ::ng-deep {
         .mat-list-item-content {
-            background: #cae9ff !important;
+            background: white!important;
             &:hover {
-                background: #cae9ff !important;
+                background: white!important;
             }
         }
     }
 }
 
 .mat-subheader {
-    color: #eef3f7;
+    color: white;
     font-size: 0.6rem;
     font-weight: 100;
     letter-spacing: 1px;

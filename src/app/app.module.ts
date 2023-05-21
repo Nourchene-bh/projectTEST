@@ -43,6 +43,10 @@ import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { ServteachComponent } from './servteach/servteach.component';
+import { AdminComponent } from './admin/admin.component';
+import { SelectclassroomComponent } from './selectclassroom/selectclassroom.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { DialogcomponentComponent } from './dialogcomponent/dialogcomponent.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,10 @@ import { ServteachComponent } from './servteach/servteach.component';
         TeachersComponent,
         ConnexionComponent,
         ServteachComponent,
+        AdminComponent,
+        SelectclassroomComponent,
+        ConfirmationDialogComponent,
+        DialogcomponentComponent,
        
        
   ],

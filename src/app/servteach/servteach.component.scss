@@ -32,3 +32,26 @@ th {
     flex-direction: column;
     min-width: 300px;
 }
+
+.button-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    // box-sizing: border-box;
+    // font-family: 'Poppins', sans-serif;
+}
+
+body {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    min-height: 100vh;
+    // background-color: #c9e6f6; 
+    background-image: url('tut.png');
+    background-size: cover;
+}

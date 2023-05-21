@@ -1,134 +1,42 @@
-<!-- <body>
-    <div class="container ">
-        <div class="signin-signup ">
-            <form action=" " class="sign-in-form ">
-                <h2 class="title ">Hello yoo Teacher!</h2>
-                <br> <br>
-                <!-- <div class="input-field "> -->
-<!-- <img src="assets/images/user.png " style="height: 2Opx;width: 20px; margin-left: 30px ; "> -->
-<!-- <i class="fas fa-user "></i>
-                <select name="Username">
-                        <option value="" disabled selected>Choose your username</option>
-                        <option value="user1">User 1</option>
-                        <option value="user2">User 2</option>
-                        <option value="user3">User 3</option>
-                      </select>
-        </div> -->
+<body>
+    <br><br><br>
+    <div class="button-container">
+        <button mat-button color="primary" (click)="logout()" style="color: rgb(240, 240, 240); background-color: #272150;">Logout</button>
+    </div>
+    <div class="form-container">
 
+        <h2> </h2>
+        <div class="example-container">
+            Enter the level
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="Level" [(ngModel)]="level">
+                    <mat-option value=""></mat-option>
+                    <mat-option value="IoT 3A">IoT 3A</mat-option>
+                    <mat-option value="IoT 3B">IoT 3B </mat-option>
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field> <br><br><br> Enter the subject
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="Subject" [(ngModel)]="subject">
+                    <mat-option value=""></mat-option>
+                    <mat-option value="VHDL">VHDL</mat-option>
+                    <!-- <mat-option value="Algebra ">Algebra</mat-option> -->
+                    <mat-option value=" Analysis"> Analysis </mat-option>
+                    <mat-option value="English">English </mat-option>
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field> <br><br><br> Enter the classroom
+            <mat-form-field style="width: 100%;">
+                <mat-select placeholder="">
 
-<!-- <div class="input-field">
-    <i class="fas fa-user"></i>
-    <select name="Username">
-              <option value="" disabled selected>Choose username</option>
-              <option value="user1">User 1</option>
-              <option value="user2">User 2</option>
-              <option value="user3">User 3</option>
-            </select>
-</div>
-
-<div class="input-field ">
-    <img src="assets/images/lock.png " style="height: 2Opx;width: 20px; margin-left: 30px ; ">
-    <i class="fas fa-lock "></i>
-    <input type="password" placeholder="Password " name="Password">
-</div>
-<br> <br> <br>
-<input type="submit" value="login" class="btn" (click)="login()"> </form>
-<form action=" " class="sign-up-form ">
-    <h2 class="title ">Sign up</h2>
-    <div class="input-field ">
-        <i class="fas fa-user "></i>
-        <input type="text " placeholder="Username ">
-    </div>
-    <div class="input-field ">
-        <i class="fas fa-envelope "></i>
-        <input type="text " placeholder="Email ">
-    </div>
-    <div class="input-field ">
-        <i class="fas fa-lock "></i>
-        <input type="password " placeholder="Password ">
-    </div>
-    <input type="submit " value="Sign up " class="btn ">
-    <p class="social-text ">Or Sign in with social platform</p>
-    <div class="social-media ">
-        <a href="# " class="social-icon ">
-            <i class="fab fa-facebook "></i>
-        </a>
-        <a href=" " class="social-icon ">
-            <i class="fab fa-twitter "></i>
-        </a>
-        <a href=" " class="social-icon ">
-            <i class="fab fa-google "></i>
-        </a>
-        <a href=" " class="social-icon ">
-            <i class="fab fa-linkedin-in "></i>
-        </a>
-    </div>
-    <input type="submit " value="se connecter " class="btn ">
-    <p class="account-text ">Already have an account?
-        <a href="# " id="sign-in-btn2 "></a>
-    </p>
-</form>
-</div> -->
-<!-- <div class="panels-container ">
-    <div class="panel left-panel ">
-        <div class="content ">
-            <h3>Member of Brand?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque accusantium dolor, eos incidunt minima iure?</p>
+                    <mat-option value="option">D013</mat-option>
+                    <mat-option value="option">D0114</mat-option>
+                    <mat-option value="option">D015</mat-option>
+                    <!-- <mat-option value="option">C 004</mat-option> -->
+                    <!-- <mat-option value="option ">Option</mat-option> -->
+                </mat-select>
+            </mat-form-field>
+            <button mat-button color="primary" (click)="login()" style="color: rgb(240, 240, 240); background-color: #2d265e;">Submit</button>
         </div>
-        <img src=" " alt=" " class="image ">
     </div>
-
-    <div class="panel right-panel ">
-
-
-        <img src="assets/images/Authentication-rafiki.png " alt=" " class="image "> </div>
-</div>
-<router-outlet></router-outlet> -->
-<!-- </div> -->
-<br><br><br>
-<!-- <div class="container">
-    <div class="example-container">
-        <mat-form-field>
-            <input matInput placeholder="Input">
-        </mat-form-field>
-
-        <mat-form-field>
-            <textarea matInput placeholder="Textarea"></textarea>
-        </mat-form-field>
-
-        <mat-form-field>
-            <mat-select placeholder="Select">
-                <mat-option value="option">Option</mat-option>
-            </mat-select>
-        </mat-form-field>
-    </div>
-</div> -->
-<div class="form-container">
-    <h2> Hello teacher </h2>
-    <div class="example-container">
-        <mat-form-field style="width: 100%;">
-            <mat-select placeholder="Level ">
-                <mat-option value="option">IOT 3A</mat-option>
-                <mat-option value="option">IOT 3B </mat-option>
-                <!-- <mat-option value="option ">Option</mat-option> -->
-            </mat-select>
-        </mat-form-field> <br><br><br>
-
-        <mat-form-field style="width: 100%;">
-            <mat-select placeholder="Subjects">
-                <mat-option value="option">Algebra</mat-option>
-                <mat-option value="option">Analysis </mat-option>
-                <!-- <mat-option value="option ">Option</mat-option> -->
-            </mat-select>
-        </mat-form-field> <br><br><br>
-
-        <mat-form-field style="width: 100%;">
-            <mat-select placeholder="Classroomname">
-                <mat-option value="option">D 011</mat-option>
-                <mat-option value="option">C 004</mat-option>
-                <!-- <mat-option value="option ">Option</mat-option> -->
-            </mat-select>
-        </mat-form-field>
-        <button mat-button color="warn" (click)="login()">Warn</button>
-    </div>
-</div>
+</body>

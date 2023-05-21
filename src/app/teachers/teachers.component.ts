@@ -11,7 +11,7 @@ import { TeachersService } from '../teachers.service';
 })
 export class TeachersComponent{
 
-  displayedColumns: string[] = ['Name', 'level','matiere'];
+  displayedColumns: string[] = ['cin','Name','last' ,'level','matiere'];
   dataSource!: MatTableDataSource<any>;
   @ViewChild(MatPaginator) paginator!:MatPaginator;
   @ViewChild(MatSort) sort!:MatSort;

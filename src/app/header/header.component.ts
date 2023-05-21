@@ -16,6 +16,6 @@ export class HeaderComponent  implements OnInit {
     this.toggleSidebarForMe.emit();
   }
   logout(){
-    this.router.navigateByUrl('/c/connexion')
+    this.router.navigateByUrl('teacher')
   }
 }

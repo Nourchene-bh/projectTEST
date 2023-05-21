@@ -15,6 +15,8 @@ import{ AuthentificationModule}from'./authentification/authentification.module'
 // import { ConnexionComponent } from './connexion/connexion.component';
 import { ConnexionComponent } from './authentification/connexion/connexion.component';
 import { ServteachComponent } from './servteach/servteach.component';
+import { AdminComponent } from './admin/admin.component';
+import { SelectclassroomComponent } from './selectclassroom/selectclassroom.component';
 
 
 const routes: Routes = [
@@ -25,11 +27,13 @@ const routes: Routes = [
   {path :'ad',component:AdministrationComponent},
   {path :'class',component:DashboardTeacherComponent},
   {path :'attendance',component:AttendanceComponent},
-  {path :'classrooms',component:ClassroomsComponent},
+  {path :'classroom',component:ClassroomsComponent},
   {path :'students',component:StudentsComponent},
   {path :'teachers',component:TeachersComponent},
   {path :'app',component:AppComponent},
   {path :'',component:ConnexionComponent},
+  {path :'y',component:AdminComponent},
+  {path :'classrooms',component:SelectclassroomComponent},
   {path :'kk',component:ServteachComponent},
   {
     path: 'c',

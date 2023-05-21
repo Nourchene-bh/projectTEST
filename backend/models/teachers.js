@@ -205,6 +205,7 @@ const db = require('../db');
 const teacherSchema = Joi.object({
     Name: Joi.string().required(),
     level: Joi.array().items(Joi.string().required()),
+    cin: Joi.array().items(Joi.string().required()),
     matiere: Joi.array().items(Joi.object({
         ref: Joi.string().pattern(/^\/matiere\/\w+$/).required(),
         // optionally, you can add other properties that you expect to be present in the "matiere" document

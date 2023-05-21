@@ -7,12 +7,18 @@ module.exports = (db) => { // Receive the db object as a parameter
     router.get('/', async(req, res) => {
         try {
             const snapshot = await Class.get();
-            const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+            const list = snapshot.docs.map((doc) => {
+                const data = doc.data();
+                const id = doc.id;
+                const classroomname = typeof data.classroomname === 'string' ? data.classroomname : '';
+                return { id, classroomname };
+            });
             res.send(list);
         } catch (err) {
             res.send('Error ' + err);
         }
     });
+
     router.get('/:id', async(req, res) => {
         try {
             const doc = await Class.doc(req.params.id).get();

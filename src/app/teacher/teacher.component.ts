@@ -8,13 +8,31 @@ import { Router } from '@angular/router';
 export class TeacherComponent implements OnInit {
   Username:string="";
   Password:string="";
+  errorMessage: string = '';
   constructor(private router :Router) { }
   gotopage (pagename:string): void{
     this.router.navigate([`${pagename}`]);
   }
 login(){
- 
-     this.gotopage ('class')
+  if(this.Username == "" || this.Password == ""){  
+    this.errorMessage = 'Please enter your username and password.';}
+  else if(this.Username == "Sofiene" && this.Password == "teacher"){  
+    alert('hello')
+    this.gotopage ('class')
+}
+else if(this.Username == "t" && this.Password == "t"){  
+  alert('Welcome')
+  this.gotopage ('class')
+}
+else if(this.Username == "Administrator" && this.Password == "admin"){  
+  alert('hello')
+  this.gotopage ('classrooms')}
+else {
+  this.errorMessage = 'Wrong username or password. Please try again.';
+ // this.gotopage ('dashboard')
+
+}
+    //  this.gotopage ('class')
 }
 ngOnInit(): void {
 }

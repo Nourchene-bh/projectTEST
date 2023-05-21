@@ -2,20 +2,21 @@
     <div class="container ">
         <div class="signin-signup ">
             <form action=" " class="sign-in-form ">
-                <h2 class="title ">Hello Teacher!</h2>
+                <h2 class="title ">FUTURE CLASSROOM</h2>
                 <br> <br>
                 <div class="input-field ">
                     <img src="assets/images/user.png " style="height: 2Opx;width: 20px; margin-left: 30px ; ">
                     <i class="fas fa-user "></i>
-                    <input type="text " placeholder="Username " name="Username">
+                    <input type="text " placeholder="Username " name="Username" [(ngModel)]="Username">
                 </div>
                 <div class="input-field ">
                     <img src="assets/images/lock.png " style="height: 2Opx;width: 20px; margin-left: 30px ; ">
                     <i class="fas fa-lock "></i>
-                    <input type="password" placeholder="Password " name="Password">
+                    <input type="password" placeholder="Password " name="Password" [(ngModel)]="Password">
                 </div>
                 <br> <br> <br>
                 <input type="submit" value="login" class="btn" (click)="login()"> </form>
+            <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
             <form action=" " class="sign-up-form ">
                 <h2 class="title ">Sign up</h2>
                 <div class="input-field ">
@@ -64,7 +65,7 @@
             <div class="panel right-panel ">
 
 
-                <img src="assets/images/Authentication-rafiki.png " alt=" " class="image "> </div>
+                <img src="assets/images/newpic.jpg " alt=" " class="image "> </div>
         </div>
         <router-outlet></router-outlet>
     </div>

@@ -9,168 +9,6 @@ const classroomschema = require('../models/classrooms').classroomschema;
 module.exports = (db) => { // Receive the db object as a parameter
     const Student = db.collection("students");
 
-    // router.get('/', async(req, res) => {
-    //     try {
-    //         const snapshot = await Student.get();
-    //         const list = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-    //         res.send(list);
-    //     } catch (err) {
-    //         res.send('Error ' + err);
-    //     }
-    // });
-
-    // router.get('/', async(req, res) => {
-    //     try {
-    //         const snapshot = await Student.get();
-    //         const list = snapshot.docs.map(async(doc) => {
-    //             const studentData = doc.data();
-    //             const levelRef = studentData.level;
-    //             const levelDoc = await levelRef.get();
-    //             const levelData = levelDoc.data();
-    //             return { id: doc.id, Name: studentData.Name, level: levelData };
-    //         });
-    //         res.send(await Promise.all(list));
-    //     } catch (err) {
-    //         res.send('Error ' + err);
-    //     }
-    // });
-
-    // router.get('/', async(req, res) => {
-    //     try {
-    //         const students = await Student.get();
-    //         const studentArray = students.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-    //         const result = await Promise.all(
-    //             studentArray.map(async(student) => {
-    //                 const levelRef = student.level;
-    //                 const levelDoc = await levelRef.get();
-    //                 const levelData = levelDoc.data();
-
-    //                 const subjects = [];
-    //                 if (levelData.subject && levelData.subject.length > 0) {
-    //                     for (let j = 0; j < levelData.subject.length; j++) {
-    //                         const subjectRef = levelData.subject[j];
-    //                         const subjectDoc = await subjectRef.get();
-    //                         const subjectData = subjectDoc.data();
-
-    //                         subjects.push({ name: subjectData.Name, matiere: subjectData.matiere });
-    //                     }
-    //                 }
-
-    //                 if (levelData.subject2) {
-    //                     for (let j = 0; j < levelData.subject2.length; j++) {
-    //                         const subjectRef = levelData.subject2[j];
-    //                         const subjectDoc = await subjectRef.get();
-    //                         const subjectData = subjectDoc.data();
-
-    //                         subjects.push({ name: subjectData.Name, matiere: subjectData.matiere });
-    //                     }
-    //                 }
-
-    //                 const updatedStudent = { Name: student.Name, level: levelData.level, subjects: subjects };
-    //                 return updatedStudent;
-    //             })
-    //         );
-
-    //         res.status(200).json(result);
-    //     } catch (err) {
-    //         console.error(err);
-    //         res.status(500).json({ error: 'Server Error' });
-    //     }
-    // });
-    // router.get('/', async(req, res) => {
-    //     try {
-    //         const students = await Student.get();
-    //         const studentArray = students.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-
-    //         const result = await Promise.all(
-    //             studentArray.map(async(student) => {
-    //                 const levelRef = student.level;
-    //                 const levelDoc = await levelRef.get();
-    //                 const levelData = levelDoc.data();
-
-    //                 const subjectRefs = levelData.subject || [];
-    //                 const subject2Refs = levelData.subject2 || [];
-    //                 const subjectDocs = await Promise.all([...subjectRefs, ...subject2Refs].map((subjectRef) => subjectRef.get()));
-    //                 const subjects = subjectDocs.map((subjectDoc) => {
-    //                     const subjectData = subjectDoc.data();
-    //                     return { name: subjectData.Name, matiere: subjectData.matiere };
-    //                 });
-
-    //                 const classroomRefs = student.classroomname || [];
-    //                 const classroomDocs = await Promise.all(classroomRefs.map((classroomRef) => classroomRef.get()));
-    //                 const classrooms = classroomDocs.map((classroomDoc) => classroomDoc.data().classroom);
-
-    //                 const updatedStudent = {
-    //                     Name: student.Name,
-    //                     level: levelData.level,
-    //                     subjects: subjects,
-    //                     classroomname: classrooms
-    //                 };
-    //                 return updatedStudent;
-    //             })
-    //         );
-
-    //         res.status(200).json(result);
-    //     } catch (err) {
-    //         console.error(err);
-    //         res.status(500).json({ error: 'Server Error' });
-    //     }
-    // });
-
-    // router.get('/', async(req, res) => {
-    //     try {
-    //         const students = await Student.get();
-    //         const studentArray = students.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-
-    //         const result = await Promise.all(
-    //             studentArray.map(async(student) => {
-    //                 const levelRef = student.level;
-    //                 const levelDoc = await levelRef.get();
-    //                 const levelData = levelDoc.data();
-
-    //                 console.log('levelData:', levelData); // add this line
-
-    //                 const subjectRefs = levelData.subject || [];
-    //                 const subject2Refs = levelData.subject2 || [];
-    //                 const subjectDocs = await Promise.all([...subjectRefs, ...subject2Refs].map((subjectRef) => subjectRef.get()));
-    //                 const subjects = subjectDocs.map((subjectDoc) => {
-    //                     const subjectData = subjectDoc.data();
-    //                     return { name: subjectData.Name, matiere: subjectData.matiere };
-    //                 });
-
-    //                 console.log('subjects:', subjects); // add this line
-
-    //                 // const classroomRefs = student.classroomname || [];
-    //                 // const classroomDocs = await Promise.all(classroomRefs.map((classroomRef) => classroomRef.get()));
-    //                 // const classrooms = classroomDocs.map((classroomDoc) => classroomDoc.data().classroom);
-    //                 const classroomRefs = student.classroomname || [];
-    //                 const classroomDocs = await Promise.all(classroomRefs.map((classroomRef) => classroomRef.get()));
-    //                 const classrooms = classroomDocs.map((classroomDoc) => classroomDoc.data().classroom);
-
-    //                 console.log('classrooms:', classrooms); // add this line
-
-    //                 const updatedStudent = {
-    //                     Name: student.Name,
-    //                     level: levelData.level,
-    //                     subjects: subjects,
-    //                     classroomname: classrooms,
-    //                 };
-    //                 return updatedStudent;
-    //             })
-    //         );
-
-    //         res.status(200).json(result);
-    //     } catch (err) {
-    //         console.error(err);
-    //         res.status(500).json({ error: 'Server Error' });
-    //     }
-    // });
-
-
-
-
-
     router.get('/', async(req, res) => {
         try {
             const students = await Student.get();
@@ -190,15 +28,19 @@ module.exports = (db) => { // Receive the db object as a parameter
                         return { name: subjectData.Name, matiere: subjectData.matiere };
                     });
 
-                    const classroomRefs = student.classroomname || [];
-                    const classroomDocs = await Promise.all(classroomRefs.map((classroomRef) => classroomRef.get()));
-                    const classrooms = classroomDocs.map((classroomDoc) => classroomDoc.data().classroomname);
+                    // const classroomRefs = student.classroomname || [];
+                    // const classroomDocs = await Promise.all(classroomRefs.map((classroomRef) => classroomRef.get()));
+                    // const classrooms = classroomDocs.map((classroomDoc) => classroomDoc.data().classroomname);
 
                     const updatedStudent = {
+                        id: student.id,
                         Name: student.Name,
                         level: levelData.level,
+                        is_present: student.is_present,
+                        cin: student.cin,
+                        last: student.last, // Include the is_present attribute here
                         subjects: subjects,
-                        classroomname: classrooms
+                        // classroomname: classrooms
                     };
                     return updatedStudent;
                 })
@@ -211,7 +53,23 @@ module.exports = (db) => { // Receive the db object as a parameter
         }
     });
 
+    router.put('/:id', async(req, res) => {
+        try {
+            const studentId = req.params.id;
+            const student = await Student.doc(studentId).get();
 
+            if (!student.exists) {
+                return res.status(404).json({ error: 'Student not found' });
+            }
+
+            await Student.doc(studentId).update({ is_present: false });
+
+            res.status(200).json({ message: 'Student attendance updated successfully' });
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Server Error' });
+        }
+    });
 
     // router.get('/:id', async(req, res) => {
     //     try {
